@@ -13,7 +13,7 @@ macro_rules! success {
 
 fn main() {
     let sc = SimConnect::new(CString::new("Example").unwrap().as_c_str())
-        .expect("Could not correct handle to SimConnect");
+        .expect("Could not connect handle to SimConnect");
     sc.associate_brakes().unwrap();
 
     loop {
